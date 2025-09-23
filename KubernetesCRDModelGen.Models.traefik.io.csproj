@@ -2,5 +2,6 @@
   <PropertyGroup>
     <PackageId>KubernetesCRDModelGen.Models.traefik.io</PackageId>
     <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen.Models.traefik.io</RepositoryUrl>
+    <Description>C# models for Kubernetes CRDs in group traefik.io</Description>
   </PropertyGroup>
 </Project>
