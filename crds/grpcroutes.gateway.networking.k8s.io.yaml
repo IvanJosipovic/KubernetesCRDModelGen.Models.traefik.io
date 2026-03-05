@@ -9,9 +9,9 @@ metadata:
 spec:
   group: gateway.networking.k8s.io
   names:
+    kind: GRPCRoute
     categories:
     - gateway-api
-    kind: GRPCRoute
     listKind: GRPCRouteList
     plural: grpcroutes
     singular: grpcroute

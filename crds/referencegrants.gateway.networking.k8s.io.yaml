@@ -9,9 +9,9 @@ metadata:
 spec:
   group: gateway.networking.k8s.io
   names:
+    kind: ReferenceGrant
     categories:
     - gateway-api
-    kind: ReferenceGrant
     listKind: ReferenceGrantList
     plural: referencegrants
     shortNames:

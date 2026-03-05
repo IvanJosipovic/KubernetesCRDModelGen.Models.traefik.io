@@ -11,9 +11,9 @@ metadata:
 spec:
   group: gateway.networking.k8s.io
   names:
+    kind: BackendTLSPolicy
     categories:
     - gateway-api
-    kind: BackendTLSPolicy
     listKind: BackendTLSPolicyList
     plural: backendtlspolicies
     shortNames:

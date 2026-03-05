@@ -9,9 +9,9 @@ metadata:
 spec:
   group: gateway.networking.k8s.io
   names:
+    kind: GatewayClass
     categories:
     - gateway-api
-    kind: GatewayClass
     listKind: GatewayClassList
     plural: gatewayclasses
     shortNames:
