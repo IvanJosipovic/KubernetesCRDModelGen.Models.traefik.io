@@ -9,9 +9,9 @@ metadata:
 spec:
   group: gateway.networking.k8s.io
   names:
+    kind: HTTPRoute
     categories:
     - gateway-api
-    kind: HTTPRoute
     listKind: HTTPRouteList
     plural: httproutes
     singular: httproute
