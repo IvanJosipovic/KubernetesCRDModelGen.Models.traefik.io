@@ -15,7 +15,7 @@ namespace KubernetesCRDModelGen.Models.traefik.io;
 /// The default@internal serversTransport is created from the static configuration.
 /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/load-balancing/serverstransport/
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransportList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ServersTransport>
@@ -38,11 +38,11 @@ public partial class V1alpha1ServersTransportList : IKubernetesObject<V1ListMeta
 
     /// <summary>List of V1alpha1ServersTransport objects.</summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1ServersTransport>? Items { get; set; }
+    public required IList<V1alpha1ServersTransport> Items { get; set; }
 }
 
 /// <summary>ForwardingTimeouts defines the timeouts for requests forwarded to the backend servers.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpecForwardingTimeouts
 {
@@ -71,7 +71,7 @@ public partial class V1alpha1ServersTransportSpecForwardingTimeouts
 /// RootCA defines a reference to a Secret or a ConfigMap that holds a CA certificate.
 /// If both a Secret and a ConfigMap reference are defined, the Secret reference takes precedence.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpecRootCAs
 {
@@ -91,7 +91,7 @@ public partial class V1alpha1ServersTransportSpecRootCAs
 }
 
 /// <summary>Spiffe defines the SPIFFE configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpecSpiffe
 {
@@ -105,7 +105,7 @@ public partial class V1alpha1ServersTransportSpecSpiffe
 }
 
 /// <summary>ServersTransportSpec defines the desired state of a ServersTransport.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportSpec
 {
@@ -160,7 +160,7 @@ public partial class V1alpha1ServersTransportSpec
 /// The default@internal serversTransport is created from the static configuration.
 /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/load-balancing/serverstransport/
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransport : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServersTransportSpec>

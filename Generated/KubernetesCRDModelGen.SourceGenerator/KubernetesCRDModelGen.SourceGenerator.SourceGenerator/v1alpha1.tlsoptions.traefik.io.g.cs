@@ -13,7 +13,7 @@ namespace KubernetesCRDModelGen.Models.traefik.io;
 /// TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection.
 /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/tls/tls-certificates/#certificates-stores#tls-options
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSOptionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TLSOption>
@@ -36,11 +36,11 @@ public partial class V1alpha1TLSOptionList : IKubernetesObject<V1ListMeta>, IIte
 
     /// <summary>List of V1alpha1TLSOption objects.</summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1TLSOption>? Items { get; set; }
+    public required IList<V1alpha1TLSOption> Items { get; set; }
 }
 
 /// <summary>ClientAuthType defines the client authentication type to apply.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum>))]
 public enum V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum
 {
@@ -57,7 +57,7 @@ public enum V1alpha1TLSOptionSpecClientAuthClientAuthTypeEnum
 }
 
 /// <summary>ClientAuth defines the server&apos;s policy for TLS Client Authentication.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpecClientAuth
 {
@@ -71,7 +71,7 @@ public partial class V1alpha1TLSOptionSpecClientAuth
 }
 
 /// <summary>TLSOptionSpec defines the desired state of a TLSOption.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TLSOptionSpec
 {
@@ -138,7 +138,7 @@ public partial class V1alpha1TLSOptionSpec
 /// TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection.
 /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/tls/tls-certificates/#certificates-stores#tls-options
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSOption : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TLSOptionSpec>
