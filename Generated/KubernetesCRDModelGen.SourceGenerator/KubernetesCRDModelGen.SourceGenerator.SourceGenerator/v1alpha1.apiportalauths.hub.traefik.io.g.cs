@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
 /// <summary>APIPortalAuth defines the authentication configuration for an APIPortal.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIPortalAuthList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIPortalAuth>
@@ -33,11 +33,11 @@ public partial class V1alpha1APIPortalAuthList : IKubernetesObject<V1ListMeta>, 
 
     /// <summary>List of V1alpha1APIPortalAuth objects.</summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1APIPortalAuth>? Items { get; set; }
+    public required IList<V1alpha1APIPortalAuth> Items { get; set; }
 }
 
 /// <summary>Attributes configures LDAP attribute mappings for user attributes.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpecLdapAttributes
 {
@@ -63,7 +63,7 @@ public partial class V1alpha1APIPortalAuthSpecLdapAttributes
 }
 
 /// <summary>Groups configures group extraction.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpecLdapGroups
 {
@@ -72,7 +72,7 @@ public partial class V1alpha1APIPortalAuthSpecLdapGroups
     public string? MemberOfAttribute { get; set; }
 }
 
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1APIPortalAuthSpecLdapSyncedAttributesEnum>))]
 public enum V1alpha1APIPortalAuthSpecLdapSyncedAttributesEnum
 {
@@ -91,7 +91,7 @@ public enum V1alpha1APIPortalAuthSpecLdapSyncedAttributesEnum
 }
 
 /// <summary>LDAP configures the LDAP authentication.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpecLdap
 {
@@ -161,7 +161,7 @@ public partial class V1alpha1APIPortalAuthSpecLdap
 }
 
 /// <summary>Claims configures JWT claim mappings for user attributes.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpecOidcClaims
 {
@@ -190,7 +190,7 @@ public partial class V1alpha1APIPortalAuthSpecOidcClaims
     public string? UserId { get; set; }
 }
 
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1APIPortalAuthSpecOidcSyncedAttributesEnum>))]
 public enum V1alpha1APIPortalAuthSpecOidcSyncedAttributesEnum
 {
@@ -209,7 +209,7 @@ public enum V1alpha1APIPortalAuthSpecOidcSyncedAttributesEnum
 }
 
 /// <summary>OIDC configures the OIDC authentication.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpecOidc
 {
@@ -235,7 +235,7 @@ public partial class V1alpha1APIPortalAuthSpecOidc
 }
 
 /// <summary>The desired behavior of this APIPortalAuth.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpec
 {
@@ -249,7 +249,7 @@ public partial class V1alpha1APIPortalAuthSpec
 }
 
 /// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1APIPortalAuthStatusConditionsStatusEnum>))]
 public enum V1alpha1APIPortalAuthStatusConditionsStatusEnum
 {
@@ -262,7 +262,7 @@ public enum V1alpha1APIPortalAuthStatusConditionsStatusEnum
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthStatusConditions
 {
@@ -308,7 +308,7 @@ public partial class V1alpha1APIPortalAuthStatusConditions
 }
 
 /// <summary>The current status of this APIPortalAuth.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthStatus
 {
@@ -327,7 +327,7 @@ public partial class V1alpha1APIPortalAuthStatus
 }
 
 /// <summary>APIPortalAuth defines the authentication configuration for an APIPortal.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIPortalAuth : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIPortalAuthSpec?>, IStatus<V1alpha1APIPortalAuthStatus?>

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
 /// <summary>APIRateLimit defines how group of consumers are rate limited on a set of APIs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIRateLimitList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIRateLimit>
@@ -33,14 +33,14 @@ public partial class V1alpha1APIRateLimitList : IKubernetesObject<V1ListMeta>, I
 
     /// <summary>List of V1alpha1APIRateLimit objects.</summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1APIRateLimit>? Items { get; set; }
+    public required IList<V1alpha1APIRateLimit> Items { get; set; }
 }
 
 /// <summary>
 /// A label selector requirement is a selector that contains values, a key, and an operator that
 /// relates the key and values.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
 {
@@ -71,7 +71,7 @@ public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
 /// This field is optional and follows standard label selector semantics.
 /// An empty APISelector matches any API.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApiSelector
 {
@@ -89,7 +89,7 @@ public partial class V1alpha1APIRateLimitSpecApiSelector
 }
 
 /// <summary>APIReference references an API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApis
 {
@@ -102,7 +102,7 @@ public partial class V1alpha1APIRateLimitSpecApis
 /// Strategy defines how the bucket state will be synchronized between the different Traefik Hub instances.
 /// It can be, either &quot;local&quot; or &quot;distributed&quot;.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1APIRateLimitSpecStrategyEnum>))]
 public enum V1alpha1APIRateLimitSpecStrategyEnum
 {
@@ -113,7 +113,7 @@ public enum V1alpha1APIRateLimitSpecStrategyEnum
 }
 
 /// <summary>The desired behavior of this APIRateLimit.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpec
 {
@@ -166,7 +166,7 @@ public partial class V1alpha1APIRateLimitSpec
 }
 
 /// <summary>The current status of this APIRateLimit.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitStatus
 {
@@ -182,7 +182,7 @@ public partial class V1alpha1APIRateLimitStatus
 }
 
 /// <summary>APIRateLimit defines how group of consumers are rate limited on a set of APIs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1APIRateLimit : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIRateLimitSpec?>, IStatus<V1alpha1APIRateLimitStatus?>

@@ -28,7 +28,7 @@ namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
 /// 
 /// GatewayClass is a Cluster level resource.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1GatewayClassList : IKubernetesObject<V1ListMeta>, IItems<V1GatewayClass>
@@ -51,7 +51,7 @@ public partial class V1GatewayClassList : IKubernetesObject<V1ListMeta>, IItems<
 
     /// <summary>List of V1GatewayClass objects.</summary>
     [JsonPropertyName("items")]
-    public IList<V1GatewayClass>? Items { get; set; }
+    public required IList<V1GatewayClass> Items { get; set; }
 }
 
 /// <summary>
@@ -74,7 +74,7 @@ public partial class V1GatewayClassList : IKubernetesObject<V1ListMeta>, IItems<
 /// 
 /// Support: Implementation-specific
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayClassSpecParametersRef
 {
@@ -100,7 +100,7 @@ public partial class V1GatewayClassSpecParametersRef
 }
 
 /// <summary>Spec defines the desired state of GatewayClass.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayClassSpec
 {
@@ -146,7 +146,7 @@ public partial class V1GatewayClassSpec
 }
 
 /// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1GatewayClassStatusConditionsStatusEnum>))]
 public enum V1GatewayClassStatusConditionsStatusEnum
 {
@@ -159,7 +159,7 @@ public enum V1GatewayClassStatusConditionsStatusEnum
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayClassStatusConditions
 {
@@ -204,7 +204,7 @@ public partial class V1GatewayClassStatusConditions
     public required string Type { get; set; }
 }
 
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayClassStatusSupportedFeatures
 {
@@ -222,7 +222,7 @@ public partial class V1GatewayClassStatusSupportedFeatures
 /// Implementations MUST populate status on all GatewayClass resources which
 /// specify their controller name.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GatewayClassStatus
 {
@@ -263,7 +263,7 @@ public partial class V1GatewayClassStatus
 /// 
 /// GatewayClass is a Cluster level resource.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.2+8c7b4a3647c1e77cd3e3152af5701ec2357dafe9")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1GatewayClass : IKubernetesObject<V1ObjectMeta>, ISpec<V1GatewayClassSpec>, IStatus<V1GatewayClassStatus?>
