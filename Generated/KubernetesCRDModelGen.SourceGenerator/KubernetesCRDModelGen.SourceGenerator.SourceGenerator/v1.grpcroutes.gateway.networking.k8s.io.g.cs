@@ -38,7 +38,7 @@ namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
 /// Implementations MAY also accept HTTP/2 connections with an upgrade from
 /// HTTP/1, i.e. without prior knowledge.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1GRPCRouteList : IKubernetesObject<V1ListMeta>, IItems<V1GRPCRoute>
@@ -78,7 +78,7 @@ public partial class V1GRPCRouteList : IKubernetesObject<V1ListMeta>, IItems<V1G
 /// The API object must be valid in the cluster; the Group and Kind must
 /// be registered in the cluster for this reference to be valid.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecParentRefs
 {
@@ -198,7 +198,7 @@ public partial class V1GRPCRouteSpecParentRefs
 /// 
 /// This filter can be used multiple times within the same rule.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
 {
@@ -219,7 +219,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierAdd
 {
@@ -242,7 +242,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet
 {
@@ -270,7 +270,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
 /// 
 /// Support: Core
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
 {
@@ -363,7 +363,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
 /// 
 /// Support: Implementation-specific for any other resource
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef
 {
@@ -429,7 +429,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendR
 /// Only one of Fraction or Percent may be specified. If neither field
 /// is specified, 100% of requests will be mirrored.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
 {
@@ -451,7 +451,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
 /// 
 /// Support: Extended
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
 {
@@ -506,7 +506,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierAdd
 {
@@ -529,7 +529,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet
 {
@@ -557,7 +557,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
 /// 
 /// Support: Extended
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifier
 {
@@ -651,7 +651,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
 /// MUST NOT be skipped. Instead, requests that would have been processed by
 /// that filter MUST receive a HTTP error response.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum>))]
 public enum V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum
 {
@@ -673,7 +673,7 @@ public enum V1GRPCRouteSpecRulesBackendRefsFiltersTypeEnum
 /// authentication strategies, rate-limiting, and traffic shaping. API
 /// guarantee/conformance is defined based on the type of the filter.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFilters
 {
@@ -760,7 +760,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFilters
 /// namespace&apos;s owner to accept the reference. See the ReferenceGrant
 /// documentation for details.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefs
 {
@@ -857,7 +857,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefs
 /// 
 /// This filter can be used multiple times within the same rule.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
 {
@@ -878,7 +878,7 @@ public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
 {
@@ -901,7 +901,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
 {
@@ -929,7 +929,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
 /// 
 /// Support: Core
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifier
 {
@@ -1022,7 +1022,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifier
 /// 
 /// Support: Implementation-specific for any other resource
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
 {
@@ -1088,7 +1088,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
 /// Only one of Fraction or Percent may be specified. If neither field
 /// is specified, 100% of requests will be mirrored.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorFraction
 {
@@ -1110,7 +1110,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorFraction
 /// 
 /// Support: Extended
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
 {
@@ -1165,7 +1165,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
 {
@@ -1188,7 +1188,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
 {
@@ -1216,7 +1216,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
 /// 
 /// Support: Extended
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
 {
@@ -1310,7 +1310,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifier
 /// MUST NOT be skipped. Instead, requests that would have been processed by
 /// that filter MUST receive a HTTP error response.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesFiltersTypeEnum>))]
 public enum V1GRPCRouteSpecRulesFiltersTypeEnum
 {
@@ -1332,7 +1332,7 @@ public enum V1GRPCRouteSpecRulesFiltersTypeEnum
 /// authentication strategies, rate-limiting, and traffic shaping. API
 /// guarantee/conformance is defined based on the type of the filter.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFilters
 {
@@ -1412,7 +1412,7 @@ public partial class V1GRPCRouteSpecRulesFilters
 }
 
 /// <summary>Type specifies how to match against the value of the header.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesMatchesHeadersTypeEnum>))]
 public enum V1GRPCRouteSpecRulesMatchesHeadersTypeEnum
 {
@@ -1426,7 +1426,7 @@ public enum V1GRPCRouteSpecRulesMatchesHeadersTypeEnum
 /// GRPCHeaderMatch describes how to select a gRPC route by matching gRPC request
 /// headers.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesMatchesHeaders
 {
@@ -1459,7 +1459,7 @@ public partial class V1GRPCRouteSpecRulesMatchesHeaders
 /// 
 /// Support: Implementation-specific (RegularExpression)
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteSpecRulesMatchesMethodTypeEnum>))]
 public enum V1GRPCRouteSpecRulesMatchesMethodTypeEnum
 {
@@ -1473,7 +1473,7 @@ public enum V1GRPCRouteSpecRulesMatchesMethodTypeEnum
 /// Method specifies a gRPC request service/method matcher. If this field is
 /// not specified, all services and methods will match.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesMatchesMethod
 {
@@ -1526,7 +1526,7 @@ public partial class V1GRPCRouteSpecRulesMatchesMethod
 /// 
 /// ```
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesMatches
 {
@@ -1551,7 +1551,7 @@ public partial class V1GRPCRouteSpecRulesMatches
 /// conditions (matches), processing it (filters), and forwarding the request to
 /// an API object (backendRefs).
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRules
 {
@@ -1681,7 +1681,7 @@ public partial class V1GRPCRouteSpecRules
 }
 
 /// <summary>Spec defines the desired state of GRPCRoute.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpec
 {
@@ -1801,7 +1801,7 @@ public partial class V1GRPCRouteSpec
 }
 
 /// <summary>status of the condition, one of True, False, Unknown.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1GRPCRouteStatusParentsConditionsStatusEnum>))]
 public enum V1GRPCRouteStatusParentsConditionsStatusEnum
 {
@@ -1814,7 +1814,7 @@ public enum V1GRPCRouteStatusParentsConditionsStatusEnum
 }
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParentsConditions
 {
@@ -1863,7 +1863,7 @@ public partial class V1GRPCRouteStatusParentsConditions
 /// ParentRef corresponds with a ParentRef in the spec that this
 /// RouteParentStatus struct describes the status of.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParentsParentRef
 {
@@ -1977,7 +1977,7 @@ public partial class V1GRPCRouteStatusParentsParentRef
 /// RouteParentStatus describes the status of a route with respect to an
 /// associated Parent.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParents
 {
@@ -2032,7 +2032,7 @@ public partial class V1GRPCRouteStatusParents
 }
 
 /// <summary>Status defines the current state of GRPCRoute.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatus
 {
@@ -2085,7 +2085,7 @@ public partial class V1GRPCRouteStatus
 /// Implementations MAY also accept HTTP/2 connections with an upgrade from
 /// HTTP/1, i.e. without prior knowledge.
 /// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.5.3+0316f97acf12de380316633df08e7f13a064978d")]
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1GRPCRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1GRPCRouteSpec>, IStatus<V1GRPCRouteStatus?>
