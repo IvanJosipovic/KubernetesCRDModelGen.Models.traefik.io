@@ -167,7 +167,13 @@ public enum V1alpha1TraefikServiceSpecHighestRandomWeightServicesStickyCookieSam
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -571,7 +577,13 @@ public enum V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookieSameSiteEnum
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -808,7 +820,13 @@ public enum V1alpha1TraefikServiceSpecMirroringStickyCookieSameSiteEnum
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -1139,7 +1157,13 @@ public enum V1alpha1TraefikServiceSpecWeightedServicesStickyCookieSameSiteEnum
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -1339,7 +1363,13 @@ public enum V1alpha1TraefikServiceSpecWeightedStickyCookieSameSiteEnum
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
