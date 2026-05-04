@@ -404,7 +404,13 @@ public enum V1alpha1MiddlewareSpecErrorsServiceStickyCookieSameSiteEnum
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
@@ -731,7 +737,11 @@ public partial class V1alpha1MiddlewareSpecForwardAuth
     [JsonPropertyName("tls")]
     public V1alpha1MiddlewareSpecForwardAuthTls? Tls { get; set; }
 
-    /// <summary>TrustForwardHeader defines whether to trust (ie: forward) all X-Forwarded-* headers.</summary>
+    /// <summary>
+    /// TrustForwardHeader defines whether to trust (ie: forward) all X-Forwarded-* headers.
+    /// 
+    /// Deprecated: Use forwardedHeaders.trustedIPs at the EntryPoint level instead, and set trustForwardHeader to true on this middleware.
+    /// </summary>
     [JsonPropertyName("trustForwardHeader")]
     public bool? TrustForwardHeader { get; set; }
 }

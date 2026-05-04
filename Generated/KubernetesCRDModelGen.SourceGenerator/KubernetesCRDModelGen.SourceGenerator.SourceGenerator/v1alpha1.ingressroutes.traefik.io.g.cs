@@ -238,7 +238,13 @@ public enum V1alpha1IngressRouteSpecRoutesServicesStickyCookieSameSiteEnum
     [EnumMember(Value = "lax"), JsonStringEnumMemberName("lax")]
     Lax,
     [EnumMember(Value = "strict"), JsonStringEnumMemberName("strict")]
-    Strict
+    Strict,
+    [EnumMember(Value = "None"), JsonStringEnumMemberName("None")]
+    None1,
+    [EnumMember(Value = "Lax"), JsonStringEnumMemberName("Lax")]
+    Lax1,
+    [EnumMember(Value = "Strict"), JsonStringEnumMemberName("Strict")]
+    Strict1
 }
 
 /// <summary>Cookie defines the sticky cookie configuration.</summary>
