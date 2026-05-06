@@ -11,7 +11,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.traefik.io;
 /// <summary>
 /// MiddlewareTCP is the CRD implementation of a Traefik TCP middleware.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/middlewares/overview/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -55,7 +55,7 @@ public partial class V1alpha1MiddlewareTCPSpecInFlightConn
 /// <summary>
 /// IPAllowList defines the IPAllowList middleware configuration.
 /// This middleware accepts/refuses connections based on the client IP.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/middlewares/ipallowlist/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipallowlist/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -69,7 +69,7 @@ public partial class V1alpha1MiddlewareTCPSpecIpAllowList
 /// <summary>
 /// IPWhiteList defines the IPWhiteList middleware configuration.
 /// This middleware accepts/refuses connections based on the client IP.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/middlewares/ipwhitelist/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipwhitelist/
 /// 
 /// Deprecated: please use IPAllowList instead.
 /// </summary>
@@ -94,7 +94,7 @@ public partial class V1alpha1MiddlewareTCPSpec
     /// <summary>
     /// IPAllowList defines the IPAllowList middleware configuration.
     /// This middleware accepts/refuses connections based on the client IP.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/middlewares/ipallowlist/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipallowlist/
     /// </summary>
     [JsonPropertyName("ipAllowList")]
     public V1alpha1MiddlewareTCPSpecIpAllowList? IpAllowList { get; set; }
@@ -102,7 +102,7 @@ public partial class V1alpha1MiddlewareTCPSpec
     /// <summary>
     /// IPWhiteList defines the IPWhiteList middleware configuration.
     /// This middleware accepts/refuses connections based on the client IP.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/middlewares/ipwhitelist/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/ipwhitelist/
     /// 
     /// Deprecated: please use IPAllowList instead.
     /// </summary>
@@ -112,7 +112,7 @@ public partial class V1alpha1MiddlewareTCPSpec
 
 /// <summary>
 /// MiddlewareTCP is the CRD implementation of a Traefik TCP middleware.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/middlewares/overview/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/middlewares/overview/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]

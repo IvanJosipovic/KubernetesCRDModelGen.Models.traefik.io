@@ -36,6 +36,46 @@ public partial class V1alpha1APIAuthList : IKubernetesObject<V1ListMeta>, IItems
     public required IList<V1alpha1APIAuth> Items { get; set; }
 }
 
+/// <summary>
+/// KeySource defines where to extract the API key from requests.
+/// When not specified, defaults to &quot;Authorization&quot; header with &quot;Bearer&quot; scheme and &quot;api_key&quot; query parameter.
+/// When specified, it completely overrides defaults - fields left empty will disable that extraction method.
+/// </summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIAuthSpecApiKeyKeySource
+{
+    /// <summary>Header is the name of the header containing the API key.</summary>
+    [JsonPropertyName("header")]
+    public string? Header { get; set; }
+
+    /// <summary>
+    /// HeaderAuthScheme is the authentication scheme prefix in the header value.
+    /// The scheme is used to parse headers in the format &quot; &lt;scheme&gt; &lt;token&gt; &quot;.
+    /// Only applies when header is &quot;Authorization&quot;.
+    /// </summary>
+    [JsonPropertyName("headerAuthScheme")]
+    public string? HeaderAuthScheme { get; set; }
+
+    /// <summary>Query is the name of the query parameter containing the API key.</summary>
+    [JsonPropertyName("query")]
+    public string? Query { get; set; }
+}
+
+/// <summary>APIKey configures API key authentication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIAuthSpecApiKey
+{
+    /// <summary>
+    /// KeySource defines where to extract the API key from requests.
+    /// When not specified, defaults to &quot;Authorization&quot; header with &quot;Bearer&quot; scheme and &quot;api_key&quot; query parameter.
+    /// When specified, it completely overrides defaults - fields left empty will disable that extraction method.
+    /// </summary>
+    [JsonPropertyName("keySource")]
+    public V1alpha1APIAuthSpecApiKeyKeySource? KeySource { get; set; }
+}
+
 /// <summary>TrustedIssuer represents a trusted JWT issuer with its associated JWKS endpoint for token verification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -81,6 +121,7 @@ public partial class V1alpha1APIAuthSpecJwt
     /// <summary>
     /// JWKSURL is the URL to fetch the JWKS for JWT verification.
     /// Mutually exclusive with SigningSecretName, PublicKey, JWKSFile, and TrustedIssuers.
+    /// 
     /// Deprecated: Use TrustedIssuers instead for more flexible JWKS configuration with issuer validation.
     /// </summary>
     [JsonPropertyName("jwksUrl")]
@@ -189,7 +230,7 @@ public partial class V1alpha1APIAuthSpec
 {
     /// <summary>APIKey configures API key authentication.</summary>
     [JsonPropertyName("apiKey")]
-    public JsonNode? ApiKey { get; set; }
+    public V1alpha1APIAuthSpecApiKey? ApiKey { get; set; }
 
     /// <summary>
     /// IsDefault specifies if this APIAuth should be used as the default API authentication method for the namespace.

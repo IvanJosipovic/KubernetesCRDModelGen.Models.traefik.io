@@ -194,6 +194,7 @@ public partial class V1alpha1ManagedSubscriptionSpec
     /// <summary>
     /// Applications references the Applications that will gain access to the specified APIs.
     /// Multiple ManagedSubscriptions can select the same AppID.
+    /// 
     /// Deprecated: Use ManagedApplications instead.
     /// </summary>
     [JsonPropertyName("applications")]

@@ -90,7 +90,7 @@ public enum V1alpha1IngressRouteSpecRoutesObservabilityTraceVerbosityEnum
 
 /// <summary>
 /// Observability defines the observability configuration for a router.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/observability/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/observability/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -195,6 +195,20 @@ public enum V1alpha1IngressRouteSpecRoutesServicesKindEnum
     TraefikService
 }
 
+/// <summary>MiddlewareRef is a reference to a Middleware resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1IngressRouteSpecRoutesServicesMiddlewares
+{
+    /// <summary>Name defines the name of the referenced Middleware resource.</summary>
+    [JsonPropertyName("name")]
+    public required string Name { get; set; }
+
+    /// <summary>Namespace defines the namespace of the referenced Middleware resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
 /// <summary>PassiveHealthCheck defines passive health checks for ExternalName services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -297,7 +311,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
 
 /// <summary>
 /// Sticky defines the sticky sessions configuration.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/load-balancing/service/#sticky-sessions
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service/#sticky-sessions
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -341,6 +355,10 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
     /// <summary>Kind defines the kind of the Service.</summary>
     [JsonPropertyName("kind")]
     public V1alpha1IngressRouteSpecRoutesServicesKindEnum? Kind { get; set; }
+
+    /// <summary>Middlewares defines the list of references to Middleware resources to apply to the service.</summary>
+    [JsonPropertyName("middlewares")]
+    public IList<V1alpha1IngressRouteSpecRoutesServicesMiddlewares>? Middlewares { get; set; }
 
     /// <summary>
     /// Name defines the name of the referenced Kubernetes Service or TraefikService.
@@ -410,7 +428,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
 
     /// <summary>
     /// Sticky defines the sticky sessions configuration.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/load-balancing/service/#sticky-sessions
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/service/#sticky-sessions
     /// </summary>
     [JsonPropertyName("sticky")]
     public V1alpha1IngressRouteSpecRoutesServicesSticky? Sticky { get; set; }
@@ -446,28 +464,28 @@ public partial class V1alpha1IngressRouteSpecRoutes
 
     /// <summary>
     /// Match defines the router&apos;s rule.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/rules-and-priority/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority/
     /// </summary>
     [JsonPropertyName("match")]
     public required string Match { get; set; }
 
     /// <summary>
     /// Middlewares defines the list of references to Middleware resources.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/kubernetes/crd/http/middleware/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/middleware/
     /// </summary>
     [JsonPropertyName("middlewares")]
     public IList<V1alpha1IngressRouteSpecRoutesMiddlewares>? Middlewares { get; set; }
 
     /// <summary>
     /// Observability defines the observability configuration for a router.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/observability/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/observability/
     /// </summary>
     [JsonPropertyName("observability")]
     public V1alpha1IngressRouteSpecRoutesObservability? Observability { get; set; }
 
     /// <summary>
     /// Priority defines the router&apos;s priority.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/rules-and-priority/#priority
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority/#priority
     /// </summary>
     [JsonPropertyName("priority")]
     public int? Priority { get; set; }
@@ -481,7 +499,7 @@ public partial class V1alpha1IngressRouteSpecRoutes
 
     /// <summary>
     /// Syntax defines the router&apos;s rule syntax.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/rules-and-priority/#rulesyntax
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/rules-and-priority/#rulesyntax
     /// 
     /// Deprecated: Please do not use this field and rewrite the router rules to use the v3 syntax.
     /// </summary>
@@ -506,7 +524,7 @@ public partial class V1alpha1IngressRouteSpecTlsDomains
 /// <summary>
 /// Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection.
 /// If not defined, the `default` TLSOption is used.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/tls/tls-options/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -514,14 +532,14 @@ public partial class V1alpha1IngressRouteSpecTlsOptions
 {
     /// <summary>
     /// Name defines the name of the referenced TLSOption.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/kubernetes/crd/http/tlsoption/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/tlsoption/
     /// </summary>
     [JsonPropertyName("name")]
     public required string Name { get; set; }
 
     /// <summary>
     /// Namespace defines the namespace of the referenced TLSOption.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/kubernetes/crd/http/tlsoption/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/tlsoption/
     /// </summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
@@ -537,14 +555,14 @@ public partial class V1alpha1IngressRouteSpecTlsStore
 {
     /// <summary>
     /// Name defines the name of the referenced TLSStore.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/kubernetes/crd/http/tlsstore/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/tlsstore/
     /// </summary>
     [JsonPropertyName("name")]
     public required string Name { get; set; }
 
     /// <summary>
     /// Namespace defines the namespace of the referenced TLSStore.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/kubernetes/crd/http/tlsstore/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/kubernetes/crd/http/tlsstore/
     /// </summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
@@ -552,7 +570,7 @@ public partial class V1alpha1IngressRouteSpecTlsStore
 
 /// <summary>
 /// TLS defines the TLS configuration.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/router/#tls
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/router/#tls
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -561,14 +579,14 @@ public partial class V1alpha1IngressRouteSpecTls
     /// <summary>
     /// CertResolver defines the name of the certificate resolver to use.
     /// Cert resolvers have to be configured in the static configuration.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/install-configuration/tls/certificate-resolvers/acme/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/install-configuration/tls/certificate-resolvers/acme/
     /// </summary>
     [JsonPropertyName("certResolver")]
     public string? CertResolver { get; set; }
 
     /// <summary>
     /// Domains defines the list of domains that will be used to issue certificates.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/tls/tls-certificates/#domains
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-certificates/#domains
     /// </summary>
     [JsonPropertyName("domains")]
     public IList<V1alpha1IngressRouteSpecTlsDomains>? Domains { get; set; }
@@ -576,7 +594,7 @@ public partial class V1alpha1IngressRouteSpecTls
     /// <summary>
     /// Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection.
     /// If not defined, the `default` TLSOption is used.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/tls/tls-options/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/tls/tls-options/
     /// </summary>
     [JsonPropertyName("options")]
     public V1alpha1IngressRouteSpecTlsOptions? Options { get; set; }
@@ -601,16 +619,20 @@ public partial class V1alpha1IngressRouteSpec
     /// <summary>
     /// EntryPoints defines the list of entry point names to bind to.
     /// Entry points have to be configured in the static configuration.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/install-configuration/entrypoints/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints/
     /// Default: all.
     /// </summary>
     [JsonPropertyName("entryPoints")]
     public IList<string>? EntryPoints { get; set; }
 
+    /// <summary>IngressClassName defines the name of the IngressClass cluster resource.</summary>
+    [JsonPropertyName("ingressClassName")]
+    public string? IngressClassName { get; set; }
+
     /// <summary>
     /// ParentRefs defines references to parent IngressRoute resources for multi-layer routing.
     /// When set, this IngressRoute&apos;s routers will be children of the referenced parent IngressRoute&apos;s routers.
-    /// More info: https://doc.traefik.io/traefik/v3.6/routing/routers/#parentrefs
+    /// More info: https://doc.traefik.io/traefik/v3.7/routing/routers/#parentrefs
     /// </summary>
     [JsonPropertyName("parentRefs")]
     public IList<V1alpha1IngressRouteSpecParentRefs>? ParentRefs { get; set; }
@@ -621,7 +643,7 @@ public partial class V1alpha1IngressRouteSpec
 
     /// <summary>
     /// TLS defines the TLS configuration.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/routing/router/#tls
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/routing/router/#tls
     /// </summary>
     [JsonPropertyName("tls")]
     public V1alpha1IngressRouteSpecTls? Tls { get; set; }
