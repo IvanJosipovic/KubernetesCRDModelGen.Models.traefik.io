@@ -97,11 +97,15 @@ public partial class V1alpha1IngressRouteUDPSpec
     /// <summary>
     /// EntryPoints defines the list of entry point names to bind to.
     /// Entry points have to be configured in the static configuration.
-    /// More info: https://doc.traefik.io/traefik/v3.6/reference/install-configuration/entrypoints/
+    /// More info: https://doc.traefik.io/traefik/v3.7/reference/install-configuration/entrypoints/
     /// Default: all.
     /// </summary>
     [JsonPropertyName("entryPoints")]
     public IList<string>? EntryPoints { get; set; }
+
+    /// <summary>IngressClassName defines the name of the IngressClass cluster resource.</summary>
+    [JsonPropertyName("ingressClassName")]
+    public string? IngressClassName { get; set; }
 
     /// <summary>Routes defines the list of routes.</summary>
     [JsonPropertyName("routes")]

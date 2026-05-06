@@ -1520,8 +1520,8 @@ public partial class V1GRPCRouteSpecRulesMatchesMethod
 ///   - method:
 ///     type: Exact
 ///     service: &quot;foo&quot;
-///     headers:
-///   - name: &quot;version&quot;
+///   - headers:
+///     name: &quot;version&quot;
 ///     value &quot;v1&quot;
 /// 
 /// ```
@@ -2000,7 +2000,7 @@ public partial class V1GRPCRouteStatusParents
     /// 
     /// * The Route refers to a nonexistent parent.
     /// * The Route is of a type that the controller does not support.
-    /// * The Route is in a namespace the controller does not have access to.
+    /// * The Route is in a namespace to which the controller does not have access.
     /// </summary>
     [JsonPropertyName("conditions")]
     public required IList<V1GRPCRouteStatusParentsConditions> Conditions { get; set; }

@@ -162,28 +162,6 @@ public partial class V1BackendTLSPolicySpecValidationSubjectAltNames
     public string? Uri { get; set; }
 }
 
-/// <summary>
-/// WellKnownCACertificates specifies whether system CA certificates may be used in
-/// the TLS handshake between the gateway and backend pod.
-/// 
-/// If WellKnownCACertificates is unspecified or empty (&quot; &quot;), then CACertificateRefs
-/// must be specified with at least one entry for a valid configuration. Only one of
-/// CACertificateRefs or WellKnownCACertificates may be specified, not both.
-/// If an implementation does not support the WellKnownCACertificates field, or
-/// the supplied value is not recognized, the implementation MUST ensure the
-/// `Accepted` Condition on the BackendTLSPolicy is set to `status: False`, with
-/// a Reason `Invalid`.
-/// 
-/// Support: Implementation-specific
-/// </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
-[JsonConverter(typeof(JsonStringEnumConverter<V1BackendTLSPolicySpecValidationWellKnownCACertificatesEnum>))]
-public enum V1BackendTLSPolicySpecValidationWellKnownCACertificatesEnum
-{
-    [EnumMember(Value = "System"), JsonStringEnumMemberName("System")]
-    System
-}
-
 /// <summary>Validation contains backend TLS validation configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -265,8 +243,8 @@ public partial class V1BackendTLSPolicySpecValidation
     public IList<V1BackendTLSPolicySpecValidationSubjectAltNames>? SubjectAltNames { get; set; }
 
     /// <summary>
-    /// WellKnownCACertificates specifies whether system CA certificates may be used in
-    /// the TLS handshake between the gateway and backend pod.
+    /// WellKnownCACertificates specifies whether a well-known set of CA certificates
+    /// may be used in the TLS handshake between the gateway and backend pod.
     /// 
     /// If WellKnownCACertificates is unspecified or empty (&quot; &quot;), then CACertificateRefs
     /// must be specified with at least one entry for a valid configuration. Only one of
@@ -276,10 +254,17 @@ public partial class V1BackendTLSPolicySpecValidation
     /// `Accepted` Condition on the BackendTLSPolicy is set to `status: False`, with
     /// a Reason `Invalid`.
     /// 
+    /// Valid values include:
+    /// * &quot;System&quot; - indicates that well-known system CA certificates should be used.
+    /// 
+    /// Implementations MAY define their own sets of CA certificates. Such definitions
+    /// MUST use an implementation-specific, prefixed name, such as
+    /// `mycompany.com/my-custom-ca-certificates`.
+    /// 
     /// Support: Implementation-specific
     /// </summary>
     [JsonPropertyName("wellKnownCACertificates")]
-    public V1BackendTLSPolicySpecValidationWellKnownCACertificatesEnum? WellKnownCACertificates { get; set; }
+    public string? WellKnownCACertificates { get; set; }
 }
 
 /// <summary>Spec defines the desired state of BackendTLSPolicy.</summary>
@@ -304,8 +289,6 @@ public partial class V1BackendTLSPolicySpec
 
     /// <summary>
     /// TargetRefs identifies an API object to apply the policy to.
-    /// Only Services have Extended support. Implementations MAY support
-    /// additional objects, with Implementation Specific support.
     /// Note that this config applies to the entire referenced resource
     /// by default, but this default may change in the future to provide
     /// a more granular application of the policy.
@@ -326,17 +309,42 @@ public partial class V1BackendTLSPolicySpec
     ///   example, a policy with a creation timestamp of &quot;2021-07-15
     ///   01:02:03&quot; MUST be given precedence over a policy with a
     ///   creation timestamp of &quot;2021-07-15 01:02:04&quot;.
-    /// * The policy appearing first in alphabetical order by {name}.
-    ///   For example, a policy named `bar` is given precedence over a
-    ///   policy named `baz`.
+    /// * The policy appearing first in alphabetical order by {namespace}/{name}.
+    ///   For example, a policy named `foo/bar` is given precedence over a
+    ///   policy named `foo/baz`.
     /// 
     /// For any BackendTLSPolicy that does not take precedence, the
     /// implementation MUST ensure the `Accepted` Condition is set to
     /// `status: False`, with Reason `Conflicted`.
     /// 
-    /// Support: Extended for Kubernetes Service
+    /// Implementations SHOULD NOT support more than one targetRef at this
+    /// time. Although the API technically allows for this, the current guidance
+    /// for conflict resolution and status handling is lacking. Until that can be
+    /// clarified in a future release, the safest approach is to support a single
+    /// targetRef.
     /// 
-    /// Support: Implementation-specific for any other resource
+    /// Support Levels:
+    /// 
+    /// * Extended: Kubernetes Service referenced by HTTPRoute backendRefs.
+    /// 
+    /// * Implementation-Specific: Services not connected via HTTPRoute, and any
+    ///   other kind of backend. Implementations MAY use BackendTLSPolicy for:
+    ///   - Services not referenced by any Route (e.g., infrastructure services)
+    ///   - Gateway feature backends (e.g., ExternalAuth, rate-limiting services)
+    ///   - Service mesh workload-to-service communication
+    ///   - Other resource types beyond Service
+    /// 
+    /// Implementations SHOULD aim to ensure that BackendTLSPolicy behavior is consistent,
+    /// even outside of the extended HTTPRoute -(backendRef) -&gt; Service path.
+    /// They SHOULD clearly document how BackendTLSPolicy is interpreted in these
+    /// scenarios, including:
+    ///   - Which resources beyond Service are supported
+    ///   - How the policy is discovered and applied
+    ///   - Any implementation-specific semantics or restrictions
+    /// 
+    /// Note that this config applies to the entire referenced resource
+    /// by default, but this default may change in the future to provide
+    /// a more granular application of the policy.
     /// </summary>
     [JsonPropertyName("targetRefs")]
     public required IList<V1BackendTLSPolicySpecTargetRefs> TargetRefs { get; set; }

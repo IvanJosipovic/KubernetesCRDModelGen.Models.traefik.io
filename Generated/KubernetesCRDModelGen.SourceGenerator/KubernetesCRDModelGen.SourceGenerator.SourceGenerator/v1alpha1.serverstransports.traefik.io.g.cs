@@ -13,7 +13,7 @@ namespace KubernetesCRDModelGen.Models.traefik.io;
 /// ServersTransport is the CRD implementation of a ServersTransport.
 /// If no serversTransport is specified, the default@internal will be used.
 /// The default@internal serversTransport is created from the static configuration.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/load-balancing/serverstransport/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -113,6 +113,10 @@ public partial class V1alpha1ServersTransportSpec
     [JsonPropertyName("certificatesSecrets")]
     public IList<string>? CertificatesSecrets { get; set; }
 
+    /// <summary>CipherSuites defines the cipher suites to use when contacting backend servers.</summary>
+    [JsonPropertyName("cipherSuites")]
+    public IList<string>? CipherSuites { get; set; }
+
     /// <summary>DisableHTTP2 disables HTTP/2 for connections with backend servers.</summary>
     [JsonPropertyName("disableHTTP2")]
     public bool? DisableHTTP2 { get; set; }
@@ -128,6 +132,14 @@ public partial class V1alpha1ServersTransportSpec
     /// <summary>MaxIdleConnsPerHost controls the maximum idle (keep-alive) to keep per-host.</summary>
     [JsonPropertyName("maxIdleConnsPerHost")]
     public int? MaxIdleConnsPerHost { get; set; }
+
+    /// <summary>MaxVersion defines the maximum TLS version to use when contacting backend servers.</summary>
+    [JsonPropertyName("maxVersion")]
+    public string? MaxVersion { get; set; }
+
+    /// <summary>MinVersion defines the minimum TLS version to use when contacting backend servers.</summary>
+    [JsonPropertyName("minVersion")]
+    public string? MinVersion { get; set; }
 
     /// <summary>PeerCertURI defines the peer cert URI used to match against SAN URI during the peer certificate verification.</summary>
     [JsonPropertyName("peerCertURI")]
@@ -158,7 +170,7 @@ public partial class V1alpha1ServersTransportSpec
 /// ServersTransport is the CRD implementation of a ServersTransport.
 /// If no serversTransport is specified, the default@internal will be used.
 /// The default@internal serversTransport is created from the static configuration.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/http/load-balancing/serverstransport/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/http/load-balancing/serverstransport/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]

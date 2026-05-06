@@ -13,7 +13,7 @@ namespace KubernetesCRDModelGen.Models.traefik.io;
 /// ServersTransportTCP is the CRD implementation of a TCPServersTransport.
 /// If no tcpServersTransport is specified, a default one named default@internal will be used.
 /// The default@internal tcpServersTransport can be configured in the static configuration.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/serverstransport/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -159,7 +159,7 @@ public partial class V1alpha1ServersTransportTCPSpec
 /// ServersTransportTCP is the CRD implementation of a TCPServersTransport.
 /// If no tcpServersTransport is specified, a default one named default@internal will be used.
 /// The default@internal tcpServersTransport can be configured in the static configuration.
-/// More info: https://doc.traefik.io/traefik/v3.6/reference/routing-configuration/tcp/serverstransport/
+/// More info: https://doc.traefik.io/traefik/v3.7/reference/routing-configuration/tcp/serverstransport/
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]

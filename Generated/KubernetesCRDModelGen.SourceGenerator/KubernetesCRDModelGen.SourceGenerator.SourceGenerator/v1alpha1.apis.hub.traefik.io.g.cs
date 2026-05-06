@@ -164,6 +164,13 @@ public partial class V1alpha1APISpecOpenApiSpec
     public string? Url { get; set; }
 
     /// <summary>
+    /// ValidateRequestBodySchema validates the request body against the OpenAPI specification.
+    /// This option overrides the default behavior configured in the static configuration.
+    /// </summary>
+    [JsonPropertyName("validateRequestBodySchema")]
+    public bool? ValidateRequestBodySchema { get; set; }
+
+    /// <summary>
     /// ValidateRequestMethodAndPath validates that the path and method matches an operation defined in the OpenAPI specification.
     /// This option overrides the default behavior configured in the static configuration.
     /// </summary>
