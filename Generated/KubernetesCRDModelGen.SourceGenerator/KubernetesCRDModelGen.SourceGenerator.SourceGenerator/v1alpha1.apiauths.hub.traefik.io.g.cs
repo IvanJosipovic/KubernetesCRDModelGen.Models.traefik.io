@@ -76,6 +76,41 @@ public partial class V1alpha1APIAuthSpecApiKey
     public V1alpha1APIAuthSpecApiKeyKeySource? KeySource { get; set; }
 }
 
+/// <summary>TLS configures TLS for the HTTP client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIAuthSpecJwtClientConfigTls
+{
+    /// <summary>CA sets the CA bundle used to verify the server certificate.</summary>
+    [JsonPropertyName("ca")]
+    public string? Ca { get; set; }
+
+    /// <summary>
+    /// InsecureSkipVerify skips the server certificate validation.
+    /// For testing purposes only, do not use in production.
+    /// </summary>
+    [JsonPropertyName("insecureSkipVerify")]
+    public bool? InsecureSkipVerify { get; set; }
+}
+
+/// <summary>ClientConfig configures the HTTP client used to fetch the JWKS from the JWKS URL or the trusted issuers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIAuthSpecJwtClientConfig
+{
+    /// <summary>MaxRetries defines the maximum number of retry attempts for failed requests.</summary>
+    [JsonPropertyName("maxRetries")]
+    public int? MaxRetries { get; set; }
+
+    /// <summary>TimeoutSeconds configures the maximum amount of seconds to wait before giving up on requests.</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public int? TimeoutSeconds { get; set; }
+
+    /// <summary>TLS configures TLS for the HTTP client.</summary>
+    [JsonPropertyName("tls")]
+    public V1alpha1APIAuthSpecJwtClientConfigTls? Tls { get; set; }
+}
+
 /// <summary>TrustedIssuer represents a trusted JWT issuer with its associated JWKS endpoint for token verification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
@@ -106,6 +141,10 @@ public partial class V1alpha1APIAuthSpecJwt
     /// </summary>
     [JsonPropertyName("appIdClaim")]
     public required string AppIdClaim { get; set; }
+
+    /// <summary>ClientConfig configures the HTTP client used to fetch the JWKS from the JWKS URL or the trusted issuers.</summary>
+    [JsonPropertyName("clientConfig")]
+    public V1alpha1APIAuthSpecJwtClientConfig? ClientConfig { get; set; }
 
     /// <summary>ForwardHeaders specifies additional headers to forward with the request.</summary>
     [JsonPropertyName("forwardHeaders")]

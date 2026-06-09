@@ -152,6 +152,10 @@ public partial class V1alpha1APIVersionSpecOpenApiSpec
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
+    /// <summary>RefreshInterval defines the rate at which the OpenAPI specification is refreshed.</summary>
+    [JsonPropertyName("refreshInterval")]
+    public string? RefreshInterval { get; set; }
+
     /// <summary>
     /// URL is a Traefik Hub agent accessible URL for obtaining the OpenAPI specification.
     /// The URL must be accessible via a GET request method and should serve a YAML or JSON document containing the OpenAPI specification.
