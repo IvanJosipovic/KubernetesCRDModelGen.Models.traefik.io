@@ -190,6 +190,41 @@ public partial class V1alpha1APIPortalAuthSpecOidcClaims
     public string? UserId { get; set; }
 }
 
+/// <summary>TLS configures TLS for the HTTP client.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIPortalAuthSpecOidcClientConfigTls
+{
+    /// <summary>CA sets the CA bundle used to verify the server certificate.</summary>
+    [JsonPropertyName("ca")]
+    public string? Ca { get; set; }
+
+    /// <summary>
+    /// InsecureSkipVerify skips the server certificate validation.
+    /// For testing purposes only, do not use in production.
+    /// </summary>
+    [JsonPropertyName("insecureSkipVerify")]
+    public bool? InsecureSkipVerify { get; set; }
+}
+
+/// <summary>ClientConfig configures the HTTP client used to communicate with the OIDC provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIPortalAuthSpecOidcClientConfig
+{
+    /// <summary>MaxRetries defines the maximum number of retry attempts for failed requests.</summary>
+    [JsonPropertyName("maxRetries")]
+    public int? MaxRetries { get; set; }
+
+    /// <summary>TimeoutSeconds configures the maximum amount of seconds to wait before giving up on requests.</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public int? TimeoutSeconds { get; set; }
+
+    /// <summary>TLS configures TLS for the HTTP client.</summary>
+    [JsonPropertyName("tls")]
+    public V1alpha1APIPortalAuthSpecOidcClientConfigTls? Tls { get; set; }
+}
+
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [JsonConverter(typeof(JsonStringEnumConverter<V1alpha1APIPortalAuthSpecOidcSyncedAttributesEnum>))]
 public enum V1alpha1APIPortalAuthSpecOidcSyncedAttributesEnum
@@ -216,6 +251,10 @@ public partial class V1alpha1APIPortalAuthSpecOidc
     /// <summary>Claims configures JWT claim mappings for user attributes.</summary>
     [JsonPropertyName("claims")]
     public required V1alpha1APIPortalAuthSpecOidcClaims Claims { get; set; }
+
+    /// <summary>ClientConfig configures the HTTP client used to communicate with the OIDC provider.</summary>
+    [JsonPropertyName("clientConfig")]
+    public V1alpha1APIPortalAuthSpecOidcClientConfig? ClientConfig { get; set; }
 
     /// <summary>IssuerURL is the OIDC provider issuer URL.</summary>
     [JsonPropertyName("issuerUrl")]

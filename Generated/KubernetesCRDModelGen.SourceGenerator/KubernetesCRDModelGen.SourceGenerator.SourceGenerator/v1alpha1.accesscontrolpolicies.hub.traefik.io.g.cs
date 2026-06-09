@@ -148,17 +148,17 @@ public partial class V1alpha1AccessControlPolicySpecJwt
     public string? TokenQueryKey { get; set; }
 }
 
-/// <summary>TLS configures TLS communication with the Authorization Server.</summary>
+/// <summary>TLS configures TLS for the HTTP client.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen", "1.6.0+0fbafdb9fc339df17b265ba23ecc4a7be2359877")]
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfigTls
 {
-    /// <summary>CA sets the CA bundle used to sign the Authorization Server certificate.</summary>
+    /// <summary>CA sets the CA bundle used to verify the server certificate.</summary>
     [JsonPropertyName("ca")]
     public string? Ca { get; set; }
 
     /// <summary>
-    /// InsecureSkipVerify skips the Authorization Server certificate validation.
+    /// InsecureSkipVerify skips the server certificate validation.
     /// For testing purposes only, do not use in production.
     /// </summary>
     [JsonPropertyName("insecureSkipVerify")]
@@ -174,7 +174,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfig
     [JsonPropertyName("headers")]
     public IDictionary<string, string>? Headers { get; set; }
 
-    /// <summary>MaxRetries defines the number of retries for introspection requests.</summary>
+    /// <summary>MaxRetries defines the maximum number of retry attempts for failed requests.</summary>
     [JsonPropertyName("maxRetries")]
     public int? MaxRetries { get; set; }
 
@@ -182,7 +182,7 @@ public partial class V1alpha1AccessControlPolicySpecOAuthIntroClientConfig
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
 
-    /// <summary>TLS configures TLS communication with the Authorization Server.</summary>
+    /// <summary>TLS configures TLS for the HTTP client.</summary>
     [JsonPropertyName("tls")]
     public V1alpha1AccessControlPolicySpecOAuthIntroClientConfigTls? Tls { get; set; }
 
